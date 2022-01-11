@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "callReward",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "harvest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"vaults/interfaces/IStrategy.sol": "IStrategy"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"vaults/interfaces/IStrategy.sol": {
+			"keccak256": "0x2fb8e3581377bb40eba790631c64e9be77647e0205a6144e57e0a5c954c7a673",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://eefd526fbdc862b8d92df5657ae4e2f1bb72ef89dab77125860607771f2f1299",
+				"dweb:/ipfs/QmePnxUFKcxS94YmKXkKWdeERHnCty2jJAqudb7PQge3mC"
+			]
+		}
+	},
+	"version": 1
+}
