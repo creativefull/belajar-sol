@@ -50,7 +50,7 @@
 		"gasEstimates": null,
 		"methodIdentifiers": {
 			"callReward()": "97fd323d",
-			"harvest()": "4641257d"
+			"harvest(address)": "0e5c011e"
 		}
 	},
 	"abi": [
@@ -68,7 +68,13 @@
 			"type": "function"
 		},
 		{
-			"inputs": [],
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_feeAddr",
+					"type": "address"
+				}
+			],
 			"name": "harvest",
 			"outputs": [],
 			"stateMutability": "nonpayable",

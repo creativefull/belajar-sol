@@ -35,6 +35,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newFee",
+						"type": "uint256"
+					}
+				],
+				"name": "changeFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "harvest",
 				"outputs": [],
@@ -125,19 +138,19 @@
 			]
 		},
 		"vaults/beefy-miner.sol": {
-			"keccak256": "0xc9fdb93a48d9b5927940093a51c5cfbb536bb5418ffc8f458f29391773420a9a",
+			"keccak256": "0x65c18188784ab395c5ccabe4e6a360630336827facf68350270c2db0cbe05292",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7936e3ad9468a9b5acc3928511caa4de1b0d282d68adce89bed13d743309d954",
-				"dweb:/ipfs/QmccHkE2HmhmSB7Y44ym9x7dWAn43NwL91EL3RmzQ1fPWh"
+				"bzz-raw://ca2daa7d5c973d3419a12279a8b4fe4a3c6fe22cdfb39652128e22fb033ad7a9",
+				"dweb:/ipfs/QmeQuNY7AmNqQvTqKdjbDtyLBGZHY8yb5Ery23djrffMWf"
 			]
 		},
 		"vaults/interfaces/IStrategy.sol": {
-			"keccak256": "0x2fb8e3581377bb40eba790631c64e9be77647e0205a6144e57e0a5c954c7a673",
+			"keccak256": "0x79dd6a31447038d4a4a0f1a607085b1bf7e3a3026da42676a5da4032e1ea53a0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eefd526fbdc862b8d92df5657ae4e2f1bb72ef89dab77125860607771f2f1299",
-				"dweb:/ipfs/QmePnxUFKcxS94YmKXkKWdeERHnCty2jJAqudb7PQge3mC"
+				"bzz-raw://3f3cc3962aed449703a1af6332029f18d0b35000d551c28b453b785c7f480e0a",
+				"dweb:/ipfs/Qmb14m9MaLyuXfcTN8Ng7UqbwXouE1fS5pyN2jSHnS8ise"
 			]
 		}
 	},

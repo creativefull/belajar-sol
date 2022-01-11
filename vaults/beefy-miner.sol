@@ -10,6 +10,7 @@ contract Validator {
     IERC20 public reward;
     address owner;
     using SafeMath for uint256;
+    uint256 percentFee;
 
     constructor(
         IStrategy _strategyAddr,
@@ -18,6 +19,7 @@ contract Validator {
         strategy = _strategyAddr;
         owner = msg.sender;
         reward = _rewardAddr;
+        percentFee = 10;
     }
 
     function callReward() external view returns(uint256) {
@@ -28,16 +30,20 @@ contract Validator {
     function harvest() public {
         uint256 _fee = strategy.callReward();
         require(_fee > 0, "No Available Fee");
-        require(reward.allowance(msg.sender, address(this)) > 0, "Not Approved");
 
-        strategy.harvest();
-        uint256 share = _fee.mul(10).div(100);
-        reward.transferFrom(msg.sender, address(this), share);
+        strategy.harvest(address(this));
+        uint256 share = _fee.mul(percentFee).div(100);
+        reward.transfer(msg.sender, _fee.sub(share));
         reward.transfer(owner, reward.balanceOf(address(this)));
     }
 
     function transferOwner(address _newOwner) public {
         require(msg.sender == owner, "Not Owner");
         owner = _newOwner;
+    }
+
+    function changeFee(uint256 _newFee) public {
+        require(msg.sender == owner, "Not Owner");
+        percentFee = _newFee;        
     }
 }
